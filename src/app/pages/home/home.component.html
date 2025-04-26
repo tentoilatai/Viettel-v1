@@ -1,0 +1,93 @@
+<div class="home-container">
+    <app-slider></app-slider>
+    
+    <section class="plans-section" id="plans">
+      <div class="container">
+        <div class="section-header">
+          <h2>Gói cước di động Viettel</h2>
+          <p>Lựa chọn gói cước phù hợp với nhu cầu sử dụng của bạn</p>
+        </div>
+        
+        <div class="plan-cards">
+          <div *ngFor="let plan of plans" class="plan-card-wrapper">
+            <app-plan-card [plan]="plan"></app-plan-card>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tại sao chọn Viettel?</h2>
+          <p>Những lý do khiến hàng triệu khách hàng tin tưởng sử dụng dịch vụ của Viettel</p>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Phủ sóng rộng khắp</h3>
+            <p>Mạng lưới rộng khắp cả nước, phủ sóng đến mọi miền tổ quốc từ thành thị đến vùng sâu vùng xa.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M2 22h20V2L2 22zm18-2h-3V9.83l3-3V20zm-5-10.5l-4-4-4 4-2.5-2.5L13 3l5 5v1.5l-3 3z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Tốc độ vượt trội</h3>
+            <p>Tận hưởng tốc độ mạng 4G/5G nhanh nhất Việt Nam, đáp ứng mọi nhu cầu giải trí và làm việc.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Dịch vụ 24/7</h3>
+            <p>Tổng đài hỗ trợ khách hàng luôn sẵn sàng phục vụ 24/7, giải đáp mọi thắc mắc của bạn.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M21 18v1H3v-1h18zm0-1H3v-.5h18v.5zm-13-7V5h-2v4H4l4 4 4-4h-2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Ưu đãi hấp dẫn</h3>
+            <p>Thường xuyên có các chương trình khuyến mãi, ưu đãi đặc biệt dành riêng cho khách hàng thân thiết.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Bạn cần hỗ trợ thêm?</h2>
+          <p>Liên hệ ngay với chúng tôi để được tư vấn và hỗ trợ về các gói cước phù hợp nhất</p>
+          <div class="cta-buttons">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.2-.5-2.4-.5-3.6 0-.5-.4-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.5c0-.5-.4-.9-1-.9z" fill="currentColor"/>
+              </svg>
+              <span>Gọi ngay 18008168</span>
+            </a>
+            <a href="https://viettel.vn/lien-he" target="_blank" class="cta-button more">
+              <span>Tìm hiểu thêm</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

@@ -1,0 +1,31 @@
+<header [class.scrolled]="scrolled">
+    <div class="container">
+      <div class="logo">
+        <img src="https://images.pexels.com/photos/8088451/pexels-photo-8088451.jpeg?auto=compress&cs=tinysrgb&w=100" 
+             alt="Viettel Logo" 
+             class="logo-img">
+        <span>Viettel</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Trang chủ</a></li>
+          <li><a href="#plans">Gói cước</a></li>
+          <li><a href="#about">Về Viettel</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu" [class.active]="menuActive">
+        <ul>
+          <li><a href="#home" (click)="closeMenu()">Trang chủ</a></li>
+          <li><a href="#plans" (click)="closeMenu()">Gói cước</a></li>
+          <li><a href="#about" (click)="closeMenu()">Về Viettel</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>

@@ -1,0 +1,30 @@
+<div class="slider-container">
+    <div class="slider">
+      <div *ngFor="let slide of slides; let i = index" 
+           class="slide" 
+           [class.active]="currentSlide === i"
+           [@slideAnimation]="currentSlide === i ? 'active' : 'inactive'">
+        <div class="slide-content">
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.description }}</p>
+          <button class="cta-button">Khám phá ngay</button>
+        </div>
+        <div class="slide-image" [style.backgroundImage]="'url(' + slide.image + ')'"></div>
+      </div>
+    </div>
+    
+    <div class="slider-controls">
+      <button class="prev-button" (click)="prevSlide()">
+        <span class="arrow-left"></span>
+      </button>
+      <div class="slider-dots">
+        <span *ngFor="let slide of slides; let i = index" 
+              class="dot" 
+              [class.active]="currentSlide === i"
+              (click)="goToSlide(i)"></span>
+      </div>
+      <button class="next-button" (click)="nextSlide()">
+        <span class="arrow-right"></span>
+      </button>
+    </div>
+  </div>

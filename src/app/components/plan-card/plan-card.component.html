@@ -1,0 +1,55 @@
+<div class="plan-card" [class.featured]="plan.featured">
+    <div *ngIf="plan.featured" class="featured-tag">Phổ biến</div>
+    <div class="plan-header">
+      <h3>{{ plan.name }}</h3>
+      <div class="price">
+        <span class="amount">{{ plan.price | number }}</span>
+        <span class="currency">đ</span>
+        <span class="period">/{{ plan.period }}</span>
+      </div>
+    </div>
+    <div class="plan-features">
+      <div class="feature">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M2 22h20V2L2 22zm18-2h-3V9.83l3-3V20zm-5-10.5l-4-4-4 4-2.5-2.5L13 3l5 5v1.5l-3 3z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="feature-text">{{ plan.data }}</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.2-.5-2.4-.5-3.6 0-.5-.4-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.5c0-.5-.4-.9-1-.9z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="feature-text">{{ plan.call }}</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="feature-text">{{ plan.sms }}</span>
+      </div>
+    </div>
+    <div class="benefits">
+      <h4>Ưu đãi thêm</h4>
+      <ul>
+        <li *ngFor="let benefit of plan.benefits">{{ benefit }}</li>
+      </ul>
+    </div>
+    <button class="sms-button" (click)="onSmsClick()">
+      <span class="sms-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>Đăng ký qua SMS: {{ plan.smsCode }}</span>
+    </button>
+  </div>
